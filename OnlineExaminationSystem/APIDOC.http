@@ -1,0 +1,74 @@
+# To get questions
+###
+GET http://127.0.0.1:8000/questions/
+Accept:application/json
+
+#post the question
+###
+POST http://127.0.0.1:8000/questions/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "question": "What is the output of 2 ** 3?",
+    "option_a": "5",
+    "option_b": "6",
+    "option_c": "8",
+    "option_d": "9",
+    "correct_answer": "option_c"
+}
+
+
+###
+POST http://127.0.0.1:8000/questions/
+Content-Type: application/json
+
+{
+    "question": "What is the output of 10 // 3?",
+    "option_a": "3.33",
+    "option_b": "3",
+    "option_c": "1",
+    "option_d": "0",
+    "correct_answer": "option_b"
+}
+
+
+###
+POST http://127.0.0.1:8000/questions/
+Content-Type: application/json
+
+{
+    "question": "Which data type stores key-value pairs in Python?",
+    "option_a": "List",
+    "option_b": "Tuple",
+    "option_c": "Set",
+    "option_d": "Dictionary",
+    "correct_answer": "option_d"
+}
+
+
+#to retrieve 1 data
+###
+###
+GET http://127.0.0.1:8000/questions/1/
+Accept: application/json
+
+#update a qn
+###
+PUT http://127.0.0.1:8000/questions/1/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "question": "What is the output of 3 ** 2?",
+    "option_a": "6",
+    "option_b": "9",
+    "option_c": "8",
+    "option_d": "12",
+    "correct_answer": "option_b"
+}
+
+#delete a qn
+###
+DELETE http://127.0.0.1:8000/questions/1/
+Accept: application/json
